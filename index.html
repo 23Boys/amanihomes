@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amani Apartment website</title>
+    <link rel="stylesheet" href="amani.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css" integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw==" crossorigin="anonymous" referrerpolicy="no-referrer" /-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" 
+    integrity="sha512-6f7HT84a/AplPkpSRSKWqbseRTG4aRrhadjZezYQ0oVk/B+nm/US5KzQkyyOyh0Mn9cyDdChRdS9qaxJRHayww==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="amani.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><span>Amani</span>Homes<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="#home"onclick="toggleMenu();">Home</a></li>
+            
+            <li><a href="#rooms" onclick="toggleMenu();">Rooms</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Our services</a></li>
+            <li><a href="#pages" onclick="toggleMenu();">Gallery</a></li> 
+            <li><a href="#news" onclick="toggleMenu();">News</a></li>
+            <li><a href="#contacts" onclick="toggleMenu();">contacts</a></li>
+        </ul>
+    </header>
+   <!--script>
+    var menuList = document.getElementById('manulist');
+    menuList.style.maxHeight = "0px";
+
+    function menutoggle() {
+        if (menuList.style.maxHeight == "0px") {
+            menuList.style.maxHeight = "100vh";
+        }
+        else {
+            menuList.style.maxHeight = "0px";
+        }
+
+    }
+</script--> 
+<section class="home" id="home">
+    <div class="content">
+        <div class="owl-carousel owl-carousel owl-theme">
+            <div class="item">
+                <img src="living room 1.jpg" alt="">
+                <div class="text">
+                    <h1>Welcome To Amani Homes</h1>
+                    <p>Experience the perfect getaway with Amani Homes, where modern design meets timeless serenity. Our luxurious Airbnb properties are crafted to offer you comfort, functionality, and tranquility. Whether you're traveling for leisure or business, Amani Homes provides the ideal space to relax and recharge.</p>
+                    <div class="flex">
+                        <button class="primary-btn  readmore-btn">READ MORE</button>
+                        <button class="secondary-btn">CONTACT US</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="IMG-20241218-WA0071.jpg" alt="">
+                <div class="text">
+                    <h1>Your Home Away from Home</h1>
+                    <p>Discover unparalleled comfort and style at Amani Homes. Our thoughtfully curated Airbnb spaces are designed to meet your every need, offering a seamless blend of luxury and practicality. Let us be part of your journey, creating memories that last a lifetime.</p>
+                    <div class="flex">
+                        <button class="primary-btn  readmore-btn">READ MORE</button>
+                        <button class="secondary-btn" >CONTACT US</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="kitchen 1.jpg" alt="">
+                <div class="text">
+                    <h1>Unwind in Style</h1>
+                    <p>At Amani Homes, we redefine travel with spaces that exude luxury and warmth. Our Airbnb properties are tailored to provide a serene escape, blending modern amenities with a personal touch. Choose Amani Homes for a stay that feels uniquely yours.</p>
+                    <div class="flex">
+                        <button class="primary-btn readmore-btn">READ MORE</button>
+                        <button class="secondary-btn">CONTACT US</button>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          // Scroll to About section when "READ MORE" in Home section is clicked
+          const readMoreButtons = document.querySelectorAll(".readmore-btn");
+          const aboutSection = document.getElementById("about");
+        
+          readMoreButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+              aboutSection.scrollIntoView({ behavior: "smooth" });
+            });
+          });
+        
+          // Expand and show more information in About section
+          const aboutText = document.getElementById("about-text");
+          const readMoreAboutBtn = document.querySelector(".readmore-about-btn");
+        
+          readMoreAboutBtn.addEventListener("click", () => {
+            aboutText.textContent = `Amani Homes offers a range of beautifully designed spaces
+            that combine comfort, luxury, and modern amenities. Whether you're
+            looking for a peaceful retreat or a vibrant space to connect with others,
+            our homes are the perfect choice. Each property is uniquely crafted
+            to provide an unforgettable experience.`;
+            readMoreAboutBtn.style.display = "none"; // Hide the button after expanding
+          });
+        });
+        </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Scroll to About section when "READ MORE" in Home section is clicked
+      const readMoreButtons = document.querySelectorAll(".readmore-btn");
+      const aboutSection = document.getElementById("about");
+    
+      readMoreButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    
+      // Expand and show more information in About section
+      const aboutText = document.getElementById("about-text");
+      const readMoreAboutBtn = document.querySelector(".readmore-about-btn");
+    
+      readMoreAboutBtn.addEventListener("click", () => {
+        aboutText.textContent = `Amani Homes offers a range of beautifully designed spaces
+        that combine comfort, luxury, and modern amenities. Whether you're
+        looking for a peaceful retreat or a vibrant space to connect with others,
+        our homes are the perfect choice. Each property is uniquely crafted
+        to provide an unforgettable experience.`;
+        readMoreAboutBtn.style.display = "none"; // Hide the button after expanding
+      });
+    });
+    </script>
+            
+    
+    
+        
+</section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    dots: false,
+    navText: ["<i class = 'bx bx-chevron-left'></i>", "<i class = 'bx bx-chevron-right'></i>"],
+    
+    responsive:{
+        0:{
+            items: 1
+        },
+        768:{
+            items: 1
+        },
+        1000:{
+            items: 1
+        }
+    }
+})
+
+</script>
+<section class="booking" id="booking">
+<div class="container flex-space">
+    <div class="text">
+        <h1><span>Book</span> Your Apartment</h1>
+    </div>
+    <div class="form">
+        <form class="grid" >
+            <input type = "date" id="Adate" placeholder="Arrival Date">
+            <input type ="date" id="Ddate"placeholder="Departure Date">
+            <input type ="number" id="adults" placeholder="No Of Adults">
+            <input type ="number" id="Children" placeholder="No Of Children">
+            <input type="submit" value="CHECK AVAILABILITY">
+
+        </form>
+    </div>
+</div>
+<script>
+document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+        
+            // Gather form data
+            const arrivalDate = document.getElementById("Adate").value;
+            const departureDate = document.getElementById("Ddate").value;
+            const adults = document.getElementById("adults").value;
+            const children = document.getElementById("Children").value;
+        
+            // Validate form fields
+            if (!arrivalDate || !departureDate || !adults || !children) {
+                alert("Please fill in all fields before submitting.");
+                return;
+            }
+        
+            // Format the message
+            const message = `Booking Details:\nArrival Date: ${arrivalDate}\nDeparture Date: ${departureDate}\nAdults: ${adults}\nChildren: ${children}`;
+        
+            // Send to email
+            const email = "amanipenthouse@gmail.com";
+            const emailSubject = encodeURIComponent("New Booking Request");
+            const emailBody = encodeURIComponent(message);
+            window.location.href = `mailto:${email}?subject=${emailSubject}&body=${emailBody}`;
+        
+            // Send to WhatsApp
+            const whatsappNumber = "254768199420"; // WhatsApp number without leading zero
+            const whatsappMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/254${whatsappNumber}?text=${whatsappMessage}`;
+            window.open(whatsappURL, "_blank");
+        });
+        </script>
+</section>
+<section class="about top" id="about">
+    <div class="container flex">
+        <div class="left">
+            <div class="heading">
+                <h1>WELCOME</h1>
+                <div class="logo">
+                    <h2><span>About</span> Amani <span>Homes </span><span>.</span></h2>
+                </div>
+               
+            </div>
+            <script>
+                function toggleReadMore() {
+                  const aboutText = document.getElementById('about-text');
+                  const readMoreBtn = document.getElementById('read-more-btn');
+              
+                  if (aboutText.style.display === 'none' || aboutText.style.display === '') {
+                    aboutText.style.display = 'block';
+                    readMoreBtn.textContent = 'Read Less';
+                  } else {
+                    aboutText.style.display = 'none';
+                    readMoreBtn.textContent = 'Read More';
+                  }
+                }
+              </script>
+              
+              <div id="about-text" style="display: none;">
+                Welcome to Amani Homes, your ultimate destination for a serene and luxurious getaway. Nestled in prime locations, our Airbnbs offer more than just a place to stay; they provide an experience of comfort, elegance, and peace. Whether you're here for a family vacation, a romantic escape, or a business trip, Amani Homes is designed to meet your every need.
+              
+                At Amani Homes, we believe in creating spaces that feel like a home away from home. Our properties are thoughtfully furnished, blending modern amenities with warm, inviting decor. From breathtaking views and cozy interiors to fully equipped kitchens and high-speed Wi-Fi, we ensure every detail enhances your stay.
+              
+                Our commitment goes beyond accommodation; we aim to provide impeccable service and unforgettable memories. Whether you need local recommendations, assistance with your itinerary, or just a quiet place to unwind, our team is here to make your stay seamless and enjoyable.
+              
+                Discover the perfect blend of relaxation and adventure with Amani Homes. Come as guests, leave as family.
+              </div>
+              
+              <button id="read-more-btn" class="primary-btn" onclick="toggleReadMore()">Read More</button>
+              
+        </div>
+        <div class="right">
+            <img src="amani5.jpg">
+        </div>
+
+    </div>
+</section>
+<section class="counter top">
+    <div class="container grid">
+        <div class="box">
+            <h1>130</h1>
+        <hr>
+        <span>Happy Customers</span>
+        
+        </div>
+        <div class="box">
+            <h1>73</h1>
+        <hr>
+        <span>Experts Reviews</span>
+        
+        </div>
+        <div class="box">
+            <h1>100%</h1>
+        <hr>
+        <span>Airbnb Recommended</span>
+        
+        </div>
+        <div class="box">
+            <h1>180</h1>
+        <hr>
+        <span>Served Customers</span>
+        
+        </div>
+    </div>
+</section>
+<section class="rooms" id="rooms">
+    <div class="container top">
+        <div class="heading">
+            <h1>EXPLORE</h1>
+            <h2>Our Rooms</h2>
+            <p>
+              Step into a world of elegance and comfort with our carefully curated rooms. Each space at Amani Homes is designed to offer a perfect balance of style and functionality. From plush bedding that promises a restful night’s sleep to modern amenities that cater to your every need, our rooms are your haven of tranquility.
+            </p>
+            <p>
+              Wake up to stunning views, enjoy a cup of coffee in your cozy lounge area, and prepare for a day of relaxation or exploration. Whether you prefer a spacious suite for the family or a cozy retreat for two, our rooms offer the ideal setting for unforgettable moments.
+            </p>
+            <p>
+              At Amani Homes, every room tells a story of luxury, comfort, and impeccable attention to detail. Experience the perfect stay tailored just for you.
+            </p>
+            <button class="read-more-btn">Read More</button>
+    
+            <button class="primary-btn">View Rooms</button>
+          </div>
+          
+        <div class="content mtop">
+            <div class="owl-carousel owl-carousel1 owl-theme">
+                <div class="items">
+                    <div class="image">
+                        <img src="IMG-20241218-WA0064.jpg" alt="">
+
+                    </div>
+                    <div class="text">
+                        <h2>Three Bedroom Apartments</h2>
+                        <div class="rate flex" data-rating="5">
+                            <i  class="bx bx-star" ></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+
+                        </div>
+                        <p>Spacious Three Bedroom apartment located along links road Nyali.</p>
+                        <div class="button flex">
+                            <button class="primary-btn">BOOK NOW</button>
+                            <h3>Ksh 5000<span><br>Per night</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="image">
+                        <img src="amani19.jpg" alt="">
+
+                    </div>
+                    <div class="text">
+                        <h2>Two Bedroom Apartments</h2>
+                        <div class="rate flex" data-rating="5">
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+
+                        </div>
+                        <p>Spacious Two Bedroom apartment located along links road Nyali.</p>
+                        <div class="button flex">
+                            <button class="primary-btn">BOOK NOW</button>
+                            <h3>Ksh 2500<span><br>Per night</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="image">
+                        <img src ="IMG-20241218-WA0072.jpg"  alt="">
+
+                    </div>
+                    <div class="text">
+                        <h2>One Bedroom Apartments</h2>
+                        <div class="rate flex" data-rating="5">
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+                            <i  class="bx bx-star"></i>
+
+                        </div>
+                        <p>Spacious One Bedroom apartment located along links road Nyali.</p>
+                        <div class="button flex">
+                            <button class="primary-btn">BOOK NOW</button>
+                            <h3>Ksh 1500<span><br>Per night</span></h3>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Include this in your existing HTML -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          // Initialize star ratings
+          const ratingContainers = document.querySelectorAll(".rate");
+        
+          ratingContainers.forEach((container) => {
+            const initialRating = parseInt(container.getAttribute("data-rating")) || 0;
+            generateStars(container, initialRating);
+        
+            // Add click event to allow users to select their rating
+            container.addEventListener("click", (event) => {
+              if (event.target.tagName === "I") {
+                const selectedRating = Array.from(container.children).indexOf(event.target) + 1;
+                generateStars(container, selectedRating);
+                container.setAttribute("data-selected-rating", selectedRating);
+                alert(`You selected a rating of ${selectedRating} stars.`);
+              }
+            });
+          });
+        
+          // Function to generate stars dynamically
+          function generateStars(container, rating) {
+            container.innerHTML = ""; // Clear existing stars
+            for (let i = 1; i <= 5; i++) {
+              const star = document.createElement("i");
+              star.className = i <= rating ? "bx bxs-star" : "bx bx-star"; // Filled or outline star
+              star.style.color = i <= rating ? "#ffc107" : "#ccc"; // Highlight filled stars
+              star.style.cursor = "pointer"; // Make stars clickable
+              container.appendChild(star);
+            }
+          }
+        
+          // Attach event listeners to BOOK NOW buttons
+          const buttons = document.querySelectorAll(".primary-btn");
+        
+          buttons.forEach((button) => {
+            button.addEventListener("click", (event) => {
+              const roomDetails = event.target.closest(".items");
+              const roomType = roomDetails.querySelector("h2").textContent;
+              const price = roomDetails.querySelector("h3").textContent.trim();
+              const location = "Located along Links Road, Nyali"; // Static location
+              const ratingContainer = roomDetails.querySelector(".rate");
+              const selectedRating = ratingContainer.getAttribute("data-selected-rating") || "No rating selected";
+        
+              // Prepare email content
+              const email = "amanipenthouse@gmail.com";
+              const subject = encodeURIComponent(`Booking: ${roomType}`);
+              const body = encodeURIComponent(
+                `Hello,\n\nRoom Booked: ${roomType}\nPrice: ${price}\nLocation: ${location}\nRating: ${selectedRating} stars\n\nThank you.`
+              );
+        
+              // Simulate sending email
+              window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        
+              // Show confirmation prompt
+              alert("Your booking is awaiting approval. We will get back to you.");
+            });
+          });
+        });
+        </script>
+        
+        
+        
+    
+</section>
+<script>
+    $('.owl-carousel1').owlCarousel({
+    loop: true,
+    margin: 40,
+    nav: true,
+    dots: false,
+    navText: ["<i class = 'bx bx-chevron-left'></i>", "<i class = 'bx bx-chevron-right'></i>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 2,
+            margin: 10
+        },
+        1000: {
+            items: 3
+        }
+    }
+})
+
+</script>
+
+
+<section class="gallery" id="pages"> 
+    <div class="container top">
+    <div class="heading">
+        <h1>PHOTOS</h1>
+        <h2>Our Gallery</h2>
+        <p>Have a view of What we are</p>
+    </div>
+    </div>
+    <div class="content mtop">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+            <div class="items">
+                <div class="img">
+                    <img src="amani19.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0061.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3> Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0075.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="amani19.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0068.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0055.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0069.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0065.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0064.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+             <div class="items">
+                <div class="img">
+                    <img src="living room 4.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="amani7.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="amani9.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0076.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+            <div class="items">
+                <div class="img">
+                    <img src="IMG-20241218-WA0062.jpg" alt="">
+                </div>
+             <div class="overlay">
+                <span class="bx bx-plus"></span>
+                <h3>Our living Rooms</h3>
+             </div>
+            </div>
+
+
+
+    </div>
+</section>
+    
+<script>
+    $('.owl-carousel1').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 1000,
+    autoplayHoverPause: true,
+    navText:["<i class = 'bx bx-chevron-left'></i>", "<i class = 'bx bx-chevron-right'></i>"],
+    responsive:{
+        0: {
+            items: 1
+        },
+        768: {
+            items: 4
+            
+        },
+        1000: {
+            items: 6
+        }
+    }
+})
+
+</script>  
+<section class="services top" id="services">
+    <div class="container">
+<div class="heading">
+    <h1>SERVICES</h1>
+    <h2>Our Services</h2>
+    <p>We are glad to offer you:</p>
+</div>
+<div class="content flex-space">
+    <div class="left grid2">
+        <div class="box">
+            <div class="text">
+                <i class="fa fa-wifi" ></i>
+                <h3>Strong Wi-Fi connection</h3>
+            </div>
+        </div>
+    
+        <div class="box">
+            <div class="text">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Free utilisation of all Utensils</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="text">
+                <i class="fa-solid fa-person-biking"></i>
+                <h3>Fully equipped Gym</h3>
+            </div>
+        </div>
+        <div class="box">
+            <div class="text">
+                <i class="fa-solid fa-person-swimming"></i>
+                <h3>swimming Pool/Baby pool included</h3>
+            </div>
+            
+        </div>
+        <div class="box">
+            <div class="text">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h3>Free Champagne For Adults</h3>
+            </div>
+            
+        </div>
+        <div class="box">
+            <div class="text">
+                <i class="fa-solid fa-spa"></i>
+                <h3>spa </h3>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <div class="right">
+        <img src="IMG-20241218-WA0062.jpg" alt="">
+    </div>
+
+    </div>
+
+</section>
+<section class="Customers top">
+    <div class="container">
+        <div class="owl-carousel owl-carousel2 owl-theme">
+            <div class="item">
+                <i class="fa-solid fa-quote-right"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, at nemo culpa porro, vero cumque ullam id sequi, eligendi reprehenderit? Autem illo reprehenderit, ducimus praesentium eum commodi necessitatibus porro!</p>
+                <h3>Jane Doe</h3>
+               <label>Jane Doe</label>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-quote-right"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, at nemo culpa porro, vero cumque ullam id sequi, eligendi reprehenderit? Autem illo reprehenderit, ducimus praesentium eum commodi necessitatibus porro!</p>
+                <h3>Jane Doe</h3>
+               <label>Jane Doe</label>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-quote-right"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, at nemo culpa porro, vero cumque ullam id sequi, eligendi reprehenderit? Autem illo reprehenderit, ducimus praesentium eum commodi necessitatibus porro!</p>
+                <h3>Jane Doe</h3>
+               <label>Jane Doe</label>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-quote-right"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque, at nemo culpa porro, vero cumque ullam id sequi, eligendi reprehenderit? Autem illo reprehenderit, ducimus praesentium eum commodi necessitatibus porro!</p>
+                <h3>Jane Doe</h3>
+               <label>Jane Doe</label>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $('.owl-carousel2').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: false,
+    dots: true,
+    navText: ["<i class = 'bx bx-chevron-left'></i>", "<i class = 'bx bx-chevron-right'></i>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 1
+        
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
+</script>
+
+<section class="news top rooms" id="news">
+<div class="container">
+    <div class="heading">
+    <h1>NEWS</h1>
+    <h2>New Updates</h2>
+    <p></p>
+</div>
+<div class="content flex">
+    <div class="left grid2">
+        <div class ="items">
+            <div class = "image">
+                <img src="living room 3.jpg" alt="">
+            </div>
+            <div class="text">
+                <h2>New Studio apartment</h2>
+                <div class="admin flex">
+                    <i class="fa fa-user"></i>
+                        <label></label>
+                        <i class="fa fa-heart" id="like-icon-1"></i>
+                    <label id="like-count-1">450</label>  
+                    <i class="fa fa-comments"></i>
+                </div>
+                <p>We are Proud acquired a new studio apartments which are located In Nyali along links road.</p>
+            </div>
+
+        </div> 
+             
+    </div>
+    <div class="left grid2">
+        <div class ="items">
+            <div class = "image">
+                <img src="IMG-20241218-WA0057.jpg" alt="">
+            </div>
+            <div class="text">
+                <h2>New Three Bedroom</h2>
+
+                    <div class="admin flex">
+                        <i class="fa fa-user"></i>
+                            <label></label>
+                            <i class="fa fa-heart" id="like-icon-2"></i>
+                            <label id="like-count-2">450</label>  
+                            <i class="fa fa-comments"></i>
+                </div>
+                <p>We are Proud to let you know we have also acquired a new three bedroom apartment.Located at shanzu</p>
+            </div>
+
+        </div> 
+             
+    </div>
+    <div class="right">
+        <div class="box flex">
+            <div class="img">
+                <img src="IMG-20241218-WA0058.jpg" alt="">
+            </div>
+            <div class="stext">
+                <h2>section text</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat, quia placeat quae modi saepe eligendi illum.</p>
+            </div>
+        </div>
+        <div class="box flex">
+            <div class="img">
+                <img src="bedroom 1.jpg" alt="">
+            </div>
+            <div class="stext">
+                <h2>section text</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat, quia placeat quae modi saepe eligendi illum.</p>
+            </div>
+        </div>
+        <div class="box flex">
+            <div class="img">
+                <img src="balcony 1.jpg" alt="">
+            </div>
+            <div class="stext">
+                <h2>section text</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat, quia placeat quae modi saepe eligendi illum.</p>
+            </div>
+        </div>
+    </div>
+    
+</div>    
+    </div>
+    
+</section>
+<script>
+const likeIcon1 = document.getElementById('like-icon-1');
+const likeCountLabel1 = document.getElementById('like-count-1');
+
+const likeIcon2 = document.getElementById('like-icon-2');
+const likeCountLabel2 = document.getElementById('like-count-2');
+
+let likeCount1 = localStorage.getItem('likeCount1') ? parseInt(localStorage.getItem('likeCount1')) : 450;
+let likeCount2 = localStorage.getItem('likeCount2') ? parseInt(localStorage.getItem('likeCount2')) : 450;
+
+likeCountLabel1.textContent = likeCount1;
+likeCountLabel2.textContent = likeCount2;
+
+likeIcon1.addEventListener('click', () => {
+    likeCount1++;
+    likeCountLabel1.textContent = likeCount1;
+
+    localStorage.setItem('likeCount1', likeCount1);
+
+    likeIcon1.style.color = 'red'; 
+});
+
+likeIcon2.addEventListener('click', () => {
+    likeCount2++;
+    likeCountLabel2.textContent = likeCount2;
+
+    localStorage.setItem('likeCount2', likeCount2);
+
+    likeIcon2.style.color = 'red'; 
+});
+        </script>
+
+<section class="newsletter mtop" id="newsletter">
+    <div class="container flex-space">
+        <h1>Subscribe to Our Newsletter</h1>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Enter Your Email" id="email-input" required>
+            <button type="submit" id="subscribe-button">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const email = document.getElementById("email-input").value; 
+    
+    if (email) {
+     
+        alert("Thank you for subscribing with " + email);
+        
+      
+        document.getElementById("email-input").value = "";
+    } else {
+        alert("Please enter a valid email address.");
+    }
+});
+
+</script>
+
+
+<footer style="background:#282834 ; padding:10% 0 5% 0 ;color: #fff;">
+    <div class="container grid" id="contacts"> 
+        <div class="box">
+            <div class="logo2">
+                <h2><span>Amani</span> Homes<span>.</span></h2>
+            </div>
+                <p>Located in the heart of Mombasa, Kenya, Amani Homes is your gateway to vibrant culture, serene beaches, and unforgettable memories. Book your stay today and make your dream vacation a reality.<br></br>Join us at Amani Homes – Your Mombasa Escape Awaits!</p>
+               <div class="icon">
+                <i class="fa fa-facebook-f"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-tiktok"></i>
+               
+            </div>
+            </div>
+            <div class="box">
+                <h2>Links</h2>
+                <ul>
+                    <li>Company History</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Services</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>Contact Us</h2>
+                    <p>You Can reach Us Out</p>
+                    <i class="fa fa-location-dot"></i>
+                    <label>Mombasa,Nyali. </label></br>
+                    <i class="fa fa-phone"></i>
+                    <label>07 28 058 559</label></br>
+                    <i class="fa fa-envelope"></i>
+                    <label>amanipenthouse@gmail.com</label></br>
+                    
+            </div>
+
+           
+        </div>
+    </div>
+</footer>
+
+<div class="legal">
+    <p class="container">Copyright (c) 2025 Copyright Holder All Rights Reserved.</p>
+</div>
+</body>
+
+</html>
